@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="reelModel"
+            type="com.prabhatkushwaha.task.business.domain.models.ReelsModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+     >
+
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/vdVw"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="center"
+            app:controller_layout_id="@layout/custom_exo_controller_view"
+            app:show_buffering="when_playing" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btPlay"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/video_play" />
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="1dp"
+                android:src="@drawable/like_white" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvLikeCount"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:text="@tools:sample/us_zipcodes" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="1dp"
+                android:src="@drawable/comment_white" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvCmtCount"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:text="@tools:sample/us_zipcodes" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="1dp"
+                android:src="@drawable/share_white" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvShareCount"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                tools:text="@tools:sample/us_zipcodes" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="1dp"
+                android:src="@drawable/duet" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="RelativeOverlap" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:padding="1dp"
+                    android:src="@drawable/follow" />
+
+
+            </LinearLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvHashTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                tools:ignore="RelativeOverlap" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>
